@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+/* import { useEffect } from "react"; */
 import { useSelector, useDispatch } from "react-redux";
-import { requestBluetoothDevice, connectBluetoothDevice, writeBluetoothCharacteristic } from "../../redux/actions";
+import { requestBluetoothDevice/* , connectBluetoothDevice, writeBluetoothCharacteristic */ } from "../../redux/actions";
 
 export default function Bluetooth() {
   const dispatch = useDispatch();
