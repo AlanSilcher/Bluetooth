@@ -1,10 +1,10 @@
 import axios from "axios";
-import { requestDevice } from 'web-bluetooth';
+/* import { requestDevice } from 'web-bluetooth'; */
 
 export const CREATE_USER = "CREATE_USER";
 export const createUser = (form) => {
   return async function (dispatch) {
-    const apiData = await axios.post("http://localhost:3001/user", form);
+    await axios.post("http://localhost:3001/user", form);
     dispatch(logInUser(form));
   };
 };

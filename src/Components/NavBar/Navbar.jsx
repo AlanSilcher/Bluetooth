@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { logOutUser } from '../../redux/actions'; 
-import { requestDevice } from 'web-bluetooth';
+/* import { requestDevice } from 'web-bluetooth'; */
 
 
 export default function NavBar() {
