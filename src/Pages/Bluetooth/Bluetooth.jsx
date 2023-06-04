@@ -21,6 +21,7 @@ export default function Bluetooth() {
         </div>
       )}
       {bluetoothConnected && <div>¡Estás conectado!</div>}
+      <h3>Esto es connect {bluetoothConnected}</h3>
     </div>
   );
 }
