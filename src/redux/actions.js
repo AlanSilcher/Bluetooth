@@ -31,6 +31,7 @@ export const requestBluetoothDevice = () => {
       const device = await navigator.bluetooth.requestDevice({
         filters: [{ services: ['battery_service'] }],
       });
+      console.log("esto es device", device)
       dispatch({ type: BLUETOOTH_DEVICE, payload: device });
     } catch (error) {
       console.error('Error requesting Bluetooth device:', error);
@@ -44,6 +45,7 @@ export const connectBluetoothDevice = (device) => {
     try {
       const server = await device.gatt.connect();
       dispatch({ type: BLUETOOTH_CONNECTED, payload: server });
+      console.log("esto es server", server)
     } catch (error) {
       console.error('Error connecting to Bluetooth device:', error);
     }

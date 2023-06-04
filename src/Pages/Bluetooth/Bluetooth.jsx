@@ -9,6 +9,11 @@ export default function Bluetooth() {
   const bluetoothConnected = useSelector((state) => state.bluetoothConnected);
   const bluetoothRead = useSelector((state) => state.bluetoothRead);
 
+  console.log("esto es connect", bluetoothConnected)
+  console.log("esto es device", bluetoothDevice)
+  console.log("esto es read", bluetoothRead)
+
+
   const [inputValue, setInputValue] = useState("");
 
   const handleRequestDevice = () => {
