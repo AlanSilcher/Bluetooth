@@ -4,7 +4,7 @@ import axios from "axios";
 export const CREATE_USER = "CREATE_USER";
 export const createUser = (form) => {
   return async function (dispatch) {
-    await axios.post("http://localhost:3001/user", form);
+    await axios.post("https://bluetoothapi-production.up.railway.app/user", form);
     dispatch(logInUser(form));
   };
 };
@@ -12,7 +12,7 @@ export const createUser = (form) => {
 export const LOGIN_USER = "LOGIN_USER";
 export const logInUser = (form) => {
   return async function (dispatch) {
-    const apiData = await axios.post("http://localhost:3001/login", form);
+    const apiData = await axios.post("https://bluetoothapi-production.up.railway.app/login", form);
     const logInData = apiData.data;
     dispatch({ type: LOGIN_USER, payload: logInData });
   };
