@@ -1,5 +1,4 @@
 import axios from "axios";
-/* import { requestDevice } from 'web-bluetooth'; */
 
 export const CREATE_USER = "CREATE_USER";
 export const createUser = (form) => {

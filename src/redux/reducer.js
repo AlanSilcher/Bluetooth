@@ -20,16 +20,27 @@ const rootReducer = (state = initialState, action) => {
       return { ...state, bluetoothDevice: action.payload };
 
     case BLUETOOTH_CONNECTED:
-      return { ...state, bluetoothConnected: true };
+      return {
+        ...state,
+        bluetoothConnected: true,
+        bluetoothWritten: false,
+        bluetoothRead: null
+      };
 
     case BLUETOOTH_WRITE:
-      return { ...state, bluetoothWritten: true };
+      return {
+        ...state,
+        bluetoothWritten: true
+      };
 
     case BLUETOOTH_READ:
-      return { ...state, bluetoothRead: action.payload };
+      return {
+        ...state,
+        bluetoothRead: action.payload
+      };
 
     default:
-      return { ...state };
+      return state;
   }
 };
 
